@@ -6,7 +6,7 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 17:02:52 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/12/01 10:17:01 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/05/28 10:23:01 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_is_set(char c, const char *set)
 {
-	int		i_set;
+	int	i_set;
 
 	i_set = -1;
 	while (set[++i_set])
@@ -23,7 +23,7 @@ static int	ft_is_set(char c, const char *set)
 	return (0);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*new_s;
 	size_t	i_s;
@@ -36,8 +36,9 @@ char		*ft_strtrim(char const *s1, char const *set)
 	i_end = ft_strlen(s1) - 1;
 	while (i_end > i_s && ft_is_set(s1[i_end], set))
 		i_end--;
-	if (!(new_s = (char *)malloc(sizeof(char) * (i_end - i_s + 2))))
-		return (0);
+	new_s = (char *)malloc(sizeof(char) * (i_end - i_s + 2));
+	if (!(new_s))
+		ft_error_malloc();
 	if (!(s1[i_s]))
 	{
 		new_s[0] = 0;

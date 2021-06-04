@@ -6,13 +6,13 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 11:33:47 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/11/27 11:42:41 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/05/25 15:11:50 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);

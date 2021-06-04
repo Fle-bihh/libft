@@ -6,13 +6,13 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 10:37:28 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/11/25 10:37:30 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/05/25 15:09:21 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

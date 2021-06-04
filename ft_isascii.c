@@ -6,13 +6,13 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 16:05:14 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/12/02 16:05:16 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/05/25 15:09:14 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/25 10:36:00 by fle-biha          #+#    #+#             */
-/*   Updated: 2021/05/28 11:01:59 by fle-biha         ###   ########lyon.fr   */
+/*   Created: 2021/05/25 13:36:44 by fle-biha          #+#    #+#             */
+/*   Updated: 2021/05/25 15:07:31 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+long	ft_atol(const char *str)
 {
 	long int	res;
 	long int	sign;

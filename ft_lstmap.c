@@ -6,13 +6,13 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 16:01:11 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/11/29 14:18:17 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/05/25 15:10:41 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list		*new_lst;
 	t_list		*tmp;

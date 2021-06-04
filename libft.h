@@ -6,7 +6,7 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 11:49:57 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/12/01 10:26:16 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/06/04 10:52:21 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,15 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
-typedef struct		s_list
+typedef struct s_list_int
+{
+	int					content;
+	struct s_list_int	*next;
+}					t_list_int;
+
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -47,12 +54,13 @@ size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strnstr(const char *s1, const char *s2, size_t len);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
-char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strjoin(char *s1, char *s2, \
+					int free1, int free2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char set);
 char				*ft_itoa(int n);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-void				ft_putchar_fd(char c, int fd);
+void				ft_putchar_fd(unsigned int c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
@@ -66,5 +74,21 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), \
 					void (*del)(void *));
+void				ft_dellst_back_int(t_list_int **list);
+void				ft_dellst_front_int(t_list_int **list);
+void				ft_dellst_one_int(t_list_int **list, int i);
+void				ft_lstadd_back_int(t_list_int **list, int valeur);
+void				ft_lstadd_front_int(t_list_int **list, int valeur);
+void				ft_lstaff_int(t_list_int *list);
+void				ft_lstaff_color_int(t_list_int *list, char *color);
+void				ft_lstclear_int(t_list_int **list);
+t_list_int			*ft_lstlast_int(t_list_int *lst);
+t_list_int			*ft_lstn_int(t_list_int *lst, int n);
+int					ft_lstsize_int(t_list_int *lst);
+long				ft_atol(const char *str);
+void				ft_error(void);
+void				ft_error_malloc(void);
+char				*ft_itoa_base(unsigned int n, char *base);
+int					ft_atoi_base(char *str, char *base);
 
 #endif

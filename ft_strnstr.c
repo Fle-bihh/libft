@@ -6,13 +6,13 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 14:23:25 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/12/01 10:38:27 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/05/25 15:14:51 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strnstr(const char *s1, const char *s2, size_t len)
+char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
 	size_t		i_s1;
 	size_t		i_s2;

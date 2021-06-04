@@ -6,13 +6,13 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 15:54:45 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/11/29 14:57:28 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/05/28 10:22:05 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_count_w(char const *s, char set)
+size_t	ft_count_w(char const *s, char set)
 {
 	size_t	count_w;
 	int		i_s;
@@ -33,7 +33,7 @@ size_t		ft_count_w(char const *s, char set)
 	return (count_w);
 }
 
-char		**ft_split(char const *s, char set)
+char	**ft_split(char const *s, char set)
 {
 	char	**new_s;
 	size_t	i_new_s;
@@ -44,8 +44,9 @@ char		**ft_split(char const *s, char set)
 	if (!s)
 		return (0);
 	nbr_w = ft_count_w(s, set);
-	if (!(new_s = ft_calloc(sizeof(char *), nbr_w + 1)))
-		return (0);
+	new_s = ft_calloc(sizeof(char *), nbr_w + 1);
+	if (!(new_s))
+		ft_error_malloc();
 	while (++i_new_s < nbr_w)
 	{
 		while (*s == set)

@@ -6,13 +6,13 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 11:22:36 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/11/27 11:28:58 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/06/03 17:16:27 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(unsigned int c, int fd)
 {
 	write(fd, &c, 1);
 }

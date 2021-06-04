@@ -6,15 +6,15 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 11:43:25 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/11/29 14:37:28 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/05/25 15:12:06 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	long int long_n;
+	long int	long_n;
 
 	long_n = n;
 	if (long_n < 0)

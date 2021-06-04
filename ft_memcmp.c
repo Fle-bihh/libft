@@ -6,13 +6,13 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 16:05:48 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/12/02 16:05:49 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/05/25 15:11:27 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*tmp_s1;
 	unsigned char	*tmp_s2;

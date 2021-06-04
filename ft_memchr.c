@@ -6,13 +6,13 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 12:46:11 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/12/03 13:52:41 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/05/25 15:11:22 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*tmp;
 	size_t			i_tmp;

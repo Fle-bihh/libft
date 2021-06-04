@@ -6,7 +6,7 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 16:04:51 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/12/02 16:04:55 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/05/28 10:20:43 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ret;
 
-	if (!(ret = malloc(size * count)))
-		return (0);
+	ret = malloc(size * count);
+	if (!(ret))
+		ft_error_malloc();
 	ft_memset(ret, 0, size * count);
 	return (ret);
 }

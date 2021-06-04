@@ -6,7 +6,7 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:40:22 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/11/29 15:31:22 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/05/25 15:14:11 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	ft_strnlen(const char *s, size_t n)
 {
-	size_t len;
+	size_t	len;
 
 	len = 0;
 	while (s[len] && n--)
@@ -22,7 +22,7 @@ static size_t	ft_strnlen(const char *s, size_t n)
 	return (len);
 }
 
-size_t			ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t		i_src;
 	size_t		dest_size;

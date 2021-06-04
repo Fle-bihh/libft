@@ -6,7 +6,7 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 16:06:16 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/12/02 16:06:18 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/05/25 15:12:56 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ char	*ft_strchr(const char *s, int c)
 			return (tmp_s + i_tmp);
 		i_tmp++;
 	}
-	return (0);
+	return (NULL);
 }

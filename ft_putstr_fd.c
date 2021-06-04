@@ -6,15 +6,15 @@
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 11:30:35 by fle-biha          #+#    #+#             */
-/*   Updated: 2020/11/29 14:39:01 by fle-biha         ###   ########lyon.fr   */
+/*   Updated: 2021/05/25 15:12:12 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	int		i_s;
+	int	i_s;
 
 	i_s = -1;
 	while (s[++i_s])

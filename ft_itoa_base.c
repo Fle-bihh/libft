@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fle-biha <fle-biha@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/25 10:36:00 by fle-biha          #+#    #+#             */
-/*   Updated: 2021/05/28 11:01:59 by fle-biha         ###   ########lyon.fr   */
+/*   Created: 2021/06/01 13:31:53 by fle-biha          #+#    #+#             */
+/*   Updated: 2021/06/03 17:22:33 by fle-biha         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_itoa_base(unsigned int n, char *base)
 {
-	long int	res;
-	long int	sign;
-	int			i_str;
+	char				*str;
+	unsigned int		i;
 
-	res = 0;
-	sign = 1;
-	i_str = 0;
-	while ((str[i_str] >= 9 && str[i_str] <= 13) || (str[i_str] == 32))
-		i_str++;
-	if (str[i_str] == '-' || str[i_str] == '+')
+	i = ft_strlen(base);
+	str = (char *)malloc(sizeof(char) * 2);
+	if (!(str))
+		ft_error_malloc();
+	if (n >= i)
+		str = ft_strjoin(ft_itoa_base(n / i, base), \
+		ft_itoa_base(n % i, base), 0, 0);
+	else if (n < i)
 	{
-		if (str[i_str] == '-')
-			sign = -1;
-		i_str++;
+		str[0] = base[n];
+		str[1] = '\0';
 	}
-	while (str[i_str] >= '0' && str[i_str] <= '9')
-	{
-		res = res * 10 + str[i_str] - '0';
-		i_str++;
-	}
-	return (res * sign);
+	return (str);
 }
